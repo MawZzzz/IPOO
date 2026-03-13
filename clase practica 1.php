@@ -1,5 +1,5 @@
 <?php
-/*DEFINIR siguientes terminos;
+/*DEFINIR siguientes terminos:
 
 Objeto:
        
