@@ -11,7 +11,7 @@ Atributos:
           
 */
 include_once"";
-public class Alumno($nombre,$domicilio)
+class Alumno
 {
     
     public string $Nombre;
