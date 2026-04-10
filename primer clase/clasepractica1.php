@@ -10,7 +10,7 @@ Método:
 Atributos:
           
 */
-include_once("pruebaAutos.php");
+include_once ("pruebasAutos.php");
 
 class AUTOS
 
@@ -46,7 +46,7 @@ class AUTOS
 
 
 
-     public function getAnio($an){
+     public function getAnio($anx){
 
         return $this ->anio;
      }
@@ -64,6 +64,15 @@ class AUTOS
     }
 
 
+    public function __toString(){
+
+
+return $nuevoAuto= "Automovil". $this->marca. "/n" . "Modelo". $this->modelo . "/n" . "Patente". $this->patente;
+
+$nuevoAuto=$nuevoAuto . "Año" . $this-> getAnio($an);
+
+    }
+    
     }
 
 
