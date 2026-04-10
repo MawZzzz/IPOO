@@ -1,5 +1,5 @@
 <?php
-include 'Alumno.php';
+include_once 'Alumno.php';
 // =======================
 // Clase Direccion
 // =======================
@@ -12,12 +12,46 @@ class Direccion {
         $this->numero = $number;
     }
 
+        public function getCalle() {
+            return $this->calle;
+
+        }
+        public function getNumero() {
+            return $this->numero;
+        }   
+
+        public function setCalle($newStreet){
+            $this->calle= $newStreet;
+        }
+
+        public function setNumero($newNumber){
+            $this->numero= $newNumber;
+        }
+
     // TO DO: Crear un método getDireccionCompleta() que devuelva "Calle Numero"
-        public function getDireccionCompleta($cal, $num){
-        $direcCom= $this->calle .",". $this->numero;
+        public function getDireccionCompleta(){
+        $direcCom = "";
+        $direcCom .= $this->getCalle();
+        $direcCom .= " " . $this->getNumero();
+        
 
         return $direcCom;
             
         }
 
+        public function __tostring() {
+            $mensaje = "";
+            $mensaje .= $this->getCalle() . "\n";
+            $mensaje .= $this->getNumero() ."\n";
+
+            return $mensaje;
+
     }
+}
+
+
+
+
+
+
+?>
